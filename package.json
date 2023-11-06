@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "name": "nasa_20110391",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "install-sever": "npm install --prefix sever",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-sever && npm run install-client ",
+    "sever": "npm run watch --prefix sever" ,
+    "client": "npm start --prefix sever" ,
+    "watch":"npm run sever & npm run client",
+    "deploy":"npm run build --prefix client && npm start --prefix sever",
+    "test": "npm run test --prefix sever && npm run test client --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
